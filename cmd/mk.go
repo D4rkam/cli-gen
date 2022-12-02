@@ -1,20 +1,8 @@
-/*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
-	"fmt"
-
 	"github.com/spf13/cobra"
 )
-
-func createMainFile(cmd *cobra.Command) {
-	flags, _ := cmd.Flags().GetBool("echo")
-	if flags {
-		fmt.Println("Utilizastes la flag -e")
-	}
-}
 
 // mkCmd represents the mk command
 var mkCmd = &cobra.Command{
@@ -22,7 +10,7 @@ var mkCmd = &cobra.Command{
 	Short: "Generador de paquetes",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		createMainFile(cmd)
+		CreateMainFile(cmd)
 	},
 }
 
